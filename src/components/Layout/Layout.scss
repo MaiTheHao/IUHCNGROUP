@@ -200,6 +200,7 @@ $transition-duration: 0.3s;
 	.comp-main {
 		min-height: 100vh;
 		padding-top: 2em;
+		padding-bottom: 2em;
 	}
 
 	.comp-footer {
@@ -427,8 +428,8 @@ $transition-duration: 0.3s;
 		.comp-header,
 		.comp-main,
 		.comp-footer {
-			padding-left: .5em;
-			padding-right: .5em;
+			padding-left: 1.25em;
+			padding-right: 1.25em;
 		}
 	}
 }

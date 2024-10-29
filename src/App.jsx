@@ -3,10 +3,11 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Auth from "./Auth";
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
+import ApplyForm from "./pages/ApplyForm/ApplyForm";
 
 const AppPages = [
 	{ id: "trang-chu", name: "Trang chủ", path: "/", element: <Home /> },
-	{ id: "bieu-mau", name: "Tham gia", path: "/apply-form", element: null },
+	{ id: "bieu-mau", name: "Tham gia", path: "/apply-form", element: <ApplyForm /> },
 ];
 
 function App() {

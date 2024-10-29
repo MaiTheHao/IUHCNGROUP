@@ -21,10 +21,10 @@ function Footer() {
 						<i>❤️</i>️ Cảm ơn đã sử dụng trang web của chúng tôi <i>❤️</i>️
 					</h2>
 					<span>
-						<i>💌</i> Trang web này được thiết kế nhằm hỗ trợ mục đích có chủ đích của CLB <i>💌</i>
+						<i>💌</i> Trang web này được thiết kế nhằm hỗ trợ mục đích có chủ đích của GROUP <i>💌</i>
 					</span>
 					<span>
-						<i>💌</i> Trang web này phục vụ mục đích dành cho CLB và là một trang web phi lợi nhuận <i>💌</i>
+						<i>💌</i> Trang web này phục vụ mục đích dành cho GROUP và là một trang web phi lợi nhuận <i>💌</i>
 					</span>
 				</div>
 			</div>

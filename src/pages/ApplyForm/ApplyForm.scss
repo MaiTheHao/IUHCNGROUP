@@ -1,0 +1,141 @@
+$padding-small: 0.4em; 
+$padding-medium: 0.625em; 
+$padding-large: 1.25em;
+$border-radius: 0.5em;
+$border-radius-small: 0.25em;
+$box-shadow: 0 0 0.625em 0.125em rgba(0, 0, 0, 0.1); 
+$font-size-large: 2em;
+$font-size-medium: 1em;
+$background-color: white;
+$border-color: #ccc;
+$button-bg-color: #007bff;
+$button-hover-bg-color: #0056b3;
+
+.common-padding {
+    padding: $padding-small;
+}
+
+.common-border {
+    border: 1px solid $border-color;
+    border-radius: $border-radius-small;
+}
+
+.common-font-size {
+    font-size: $font-size-medium;
+}
+
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: $padding-large;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: $font-size-large;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        font-size: $font-size-medium;
+
+        .comp-input {
+            @extend .common-border;
+            @extend .common-padding;
+            @extend .common-font-size;
+        }
+
+        * {
+            background-color: $background-color;
+            font-size: $font-size-medium;
+        }
+
+        textarea {
+            min-width: 100%;
+            max-width: 100%;
+            margin-bottom: 0.9375em;
+            @extend .common-padding;
+            @extend .common-border;
+            @extend .common-font-size;
+        }
+
+        button {
+            @extend .common-padding;
+            background-color: $button-bg-color;
+            color: white;
+            border: none;
+            border-radius: $border-radius-small;
+            cursor: pointer;
+            font-size: $font-size-medium;
+
+            &:hover {
+                background-color: $button-hover-bg-color;
+            }
+        }
+
+        .apply-form-choices {
+            @extend .common-border;
+            padding: $padding-medium;
+            display: flex;
+
+            label {
+                flex: 1;
+                font-weight: 400;
+
+                display: flex;
+                gap: .7em;
+
+                text-wrap: nowrap;
+
+                svg{
+                    width: 1em;
+                }
+            }
+
+            select {
+                cursor: pointer;
+                flex: 1;
+                padding: 0 2em;
+
+                transition: all 0.1s ease-out;
+
+                &:hover {
+                    background-color: rgb(240, 240, 240);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .apply-form {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 500px) {
+    .apply-form-choices{
+        flex-direction: column;
+        align-items: center;
+        gap: .5em;
+
+        border: none !important;
+
+        select{
+            align-self: stretch;
+            background-color: rgb(240, 240, 240);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
