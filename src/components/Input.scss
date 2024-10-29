@@ -1,0 +1,17 @@
+.comp-input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1em;
+    border: 0.025em solid black;
+    padding: 0.3em .75em;
+    border-radius: 0.2em;
+    gap: 0.5em;
+
+    &-typing{
+        width: 100%;
+        background-color: transparent;
+    }
+}

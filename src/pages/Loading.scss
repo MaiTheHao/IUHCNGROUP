@@ -1,0 +1,71 @@
+#LoadingPage {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+
+	.LoadingPage-container {
+		position: relative;
+		width: max-content;
+		min-width: 18em;
+		height: 20em;
+		background-color: white;
+		border-radius: 1em;
+		padding: 1em 3em;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2.5em;
+
+		box-shadow: 0 0 1em 0.25em rgba(0, 0, 0, 0.1);
+
+		.LoadingPage-container-title {
+			font-size: 1em;
+			text-transform: uppercase;
+			text-align: center;
+			letter-spacing: 0.7em;
+
+			color: var(--main-background-color);
+
+			* {
+				font-weight: 350;
+			}
+		}
+
+		.LoadingPage-container-spinner {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+
+			svg {
+				width: 4em;
+				height: 4em;
+				color: var(--main-background-color);
+				animation: spin .7s ease-in-out infinite;
+			}
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+		color: var(--main-background-color);
+		opacity: 0.9;
+	}
+
+	50% {
+		color: rgb(255, 182, 126);
+		opacity: 1;
+	}
+
+	100% {
+		transform: rotate(360deg);
+		color: var(--main-background-color);
+		opacity: 0.9;
+	}
+}

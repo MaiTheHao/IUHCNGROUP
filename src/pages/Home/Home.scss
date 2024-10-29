@@ -1,0 +1,48 @@
+
+
+#HomePage {
+    position: relative;
+    width: 100%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3em;
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1em;
+
+        h2{
+            width: 50%;
+            font-size: 1.7em;
+            font-weight: 500;
+            color: var(--main-text-color);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        p{
+            width: 60%;
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    main{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        img{
+            max-height: 850px;
+            width: 50%;
+            height: auto;
+        }
+    }
+}
