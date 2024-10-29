@@ -5,8 +5,8 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 
 const AppPages = [
-	{ id: "trang-chu", name: "Trang chủ", path: "/trang-chu", element: <Home /> },
-	{ id: "bieu-mau", name: "Biểu mẫu", path: "/bieu-mau", element: null },
+	{ id: "trang-chu", name: "Trang chủ", path: "/", element: <Home /> },
+	{ id: "bieu-mau", name: "Tham gia", path: "/apply-form", element: null },
 ];
 
 function App() {
