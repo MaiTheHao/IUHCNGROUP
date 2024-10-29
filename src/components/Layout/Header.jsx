@@ -103,7 +103,7 @@ function Header() {
 						) : null}
 					</div>
 
-					{screenSize.width <= MENU_WIDTH_APPEAR ? (
+					{screenSize.width < MENU_WIDTH_APPEAR ? (
 						<div className="comp-header-right-menu">
 							<FontAwesomeIcon icon={faBars} onClick={() => setOpenMenu(!openMenu)} ref={menuIconRef} />
 							{openMenu ? <MenuList menuRef={menuRef} className="simple-dropmenu"></MenuList> : null}

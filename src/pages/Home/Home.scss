@@ -18,7 +18,8 @@
         gap: 1em;
 
         h2{
-            width: 50%;
+            width: 100%;
+            max-width: 800px;
             font-size: 1.7em;
             font-weight: 500;
             color: var(--main-text-color);
@@ -27,7 +28,8 @@
         }
 
         p{
-            width: 60%;
+            width: 100%;
+            max-width: 1000px;
             text-align: center;
             letter-spacing: 0.1em;
         }
@@ -41,7 +43,8 @@
 
         img{
             max-height: 850px;
-            width: 50%;
+            width: 100%;
+            max-width: 800px;
             height: auto;
         }
     }

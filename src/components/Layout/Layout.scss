@@ -222,6 +222,10 @@ $transition-duration: 0.3s;
 				display: flex;
 				flex-direction: column;
 				gap: $font-size-xsmall;
+
+				&-icons{
+					display: none;
+				}
 			}
 
 			h2 {
@@ -352,6 +356,79 @@ $transition-duration: 0.3s;
 		}
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 748px) {
+		.comp-header {
+			&-left {
+				&-title {
+					font-size: 1.3em;
+				}
+			}
+
+			&-right {
+				&-user {
+					&-email {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.comp-footer {
+			&-left {
+				display: flex;
+				justify-content: center;
+				&-description {
+					width: 100%;
+					font-size: 1em;
+					gap: 1em;
+
+					i {
+						display: none;
+					}
+
+					&-icons {
+						display: flex;
+						justify-content: center;
+						gap: 2em;
+						i {
+							display: inline;
+						}
+					}
+				}
+			}
+			&-right {
+				&-contacts {
+					&-list {
+						gap: 1em;
+						a {
+							font-size: 1.1em;
+							flex-wrap: wrap;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 550px) {
+		.comp-header {
+			&-left {
+				&-title {
+					font-size: 16px;
+					text-align: left;
+				}
+
+				&-logo {
+					display: none;
+				}
+			}
+		}
+
+		.comp-header,
+		.comp-main,
+		.comp-footer {
+			padding-left: .5em;
+			padding-right: .5em;
+		}
 	}
 }
