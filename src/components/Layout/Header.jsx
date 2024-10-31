@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ICON from "../../assets/pics/icon.jpg";
 import { Link } from "react-router-dom";
 import { faBars, faCircleUser } from "@fortawesome/free-solid-svg-icons";
@@ -11,11 +11,11 @@ import useAppContext from "../../context/useAppContext";
 const MENU_WIDTH_APPEAR = 850;
 
 function MenuList({ menuRef, ...rest }) {
-	const { pageStatus, setPageStatus } = useAppContext();
+	const { pageStatus, handleSetCrrPage } = useAppContext();
 	return (
 		<ul {...rest} ref={menuRef}>
 			{AppPages.map((item, index) => (
-				<li key={index} onClick={() => setPageStatus((prev) => ({ ...prev, currentPage: item.id }))}>
+				<li key={index} onClick={() => handleSetCrrPage(item.id)}>
 					<Link to={item.path} className={item.id === pageStatus.currentPage ? "openning" : ""}>
 						{item.name}
 					</Link>

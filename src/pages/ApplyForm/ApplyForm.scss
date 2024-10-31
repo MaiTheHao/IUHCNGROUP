@@ -64,6 +64,7 @@ $button-hover-bg-color: #0056b3;
         textarea {
             min-width: 100%;
             max-width: 100%;
+            min-height: 5em;
             margin-bottom: 0.9375em;
             @extend .common-padding;
             @extend .common-border;

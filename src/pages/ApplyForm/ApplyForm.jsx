@@ -6,6 +6,7 @@ import { faCode, faPeopleLine, faRankingStar } from '@fortawesome/free-solid-svg
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import validateFormData from './ApplyFormValidate';
 import Swal from 'sweetalert2';
+import handleSubmitApllyFormAction from './ApplySubmitAction';
 
 const ApplyForm = () => {
     const [formData, setFormData] = useState({
@@ -29,6 +30,7 @@ const ApplyForm = () => {
         e.preventDefault();
         if (validateFormData(formData)) {
             Swal.fire('Thành công', 'Gửi yêu cầu thành công. Yêu cầu của bạn sẽ được các Admin duyệt.', 'success');
+            handleSubmitApllyFormAction(formData);
         }
     };
 

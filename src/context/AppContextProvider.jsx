@@ -14,7 +14,7 @@ function AppContextProvider({ children }) {
 	});
 
 	const [pageStatus, setPageStatus] = useState({
-		currentPage: "trang-chu",
+		currentPage: Cookies.get("currentPage") ?? "trang-chu",
 	});
 
 	const [screenSize, setScreenSize] = useState({
@@ -44,6 +44,16 @@ function AppContextProvider({ children }) {
 		}));
 	};
 
+	const handleSetCrrPage = (currentPage) => {
+		setPageStatus({
+			...pageStatus,
+			currentPage,
+		});
+
+		if(currentPage != undefined){
+			Cookies.set("currentPage", currentPage);
+		}
+	};
 	// Các hook hiệu ứng
 	useEffect(() => {
 		const handleResize = () => {
@@ -72,7 +82,7 @@ function AppContextProvider({ children }) {
 		screenSize,
 		setScreenSize: setScreenSizeState,
 		pageStatus,
-		setPageStatus,
+		handleSetCrrPage,
 	};
 
 	return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;
