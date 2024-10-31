@@ -54,6 +54,7 @@ function AppContextProvider({ children }) {
 			Cookies.set("currentPage", currentPage);
 		}
 	};
+
 	// Các hook hiệu ứng
 	useEffect(() => {
 		const handleResize = () => {
